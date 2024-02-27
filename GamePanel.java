@@ -75,6 +75,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
         }
         if(c.getY()>GameFrame.getBoardLenght()){
             game=false;
+            if(Math.max(score,highScore)==score) {
+                highScore = (int)score;
+                game = false;
+            }
         }
     }
 
