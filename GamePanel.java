@@ -114,6 +114,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
         if(game==false){
             drawObstFreq.stop();
             gameLoop.stop();
+            if(score>highScore)
+                highScore=(int) score;
         }
     }
 
